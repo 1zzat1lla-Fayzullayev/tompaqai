@@ -70,7 +70,7 @@ function Navbar() {
 							<button className='border text-white rounded-[100px] items-center justify-center py-[10px] px-[32px] transition-all ease-in-out hover:text-[#FF4F24] hover:bg-white hidden lg:flex'>
 								FAQ
 							</button>
-							<button className='bg-white border rounded-[100px] py-[10px] px-[32px] text-[#FF4F24] transition-all ease-in-out hover:border hover:bg-inherit hover:text-white hidden lg:flex'>
+							<button className='bg-white border rounded-[100px] py-[10px] px-[20px] xl:px-[32px] text-[#FF4F24] transition-all ease-in-out hover:border hover:bg-inherit hover:text-white hidden lg:flex'>
 								Поиск животных
 							</button>
 							<img

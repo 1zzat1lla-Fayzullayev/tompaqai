@@ -9,7 +9,7 @@ function Charity() {
 				<Wrapper>
 					<div className='font-Inter pt-[134px] mx-[20px] xl:mx-0'>
 						<div>
-							<h2 className='text-[22px] md:text-[52px] lg:text-[72px] font-black text-white text-center md:text-start md:leading-[60px] lg:w-[697px] lg:leading-[65px]'>
+							<h2 className='text-[22px] md:text-[52px] xl:text-[72px] font-black text-white text-center md:text-start md:leading-[60px] lg:w-[697px] lg:leading-[65px]'>
 								Мы сотрудничаем с несколькими приютами
 							</h2>
 							<p className='text-white text-[16px] md:text-[24px] leading-[23px] md:leading-[32px] mt-[20px] lg:mt-[40px] lg:w-[628px] text-center md:text-start'>
@@ -88,25 +88,25 @@ function Charity() {
 					</div>
 
 					<div className='mt-[120px]'>
-						<div className='mt-[120px]'>
-							<h2 className='text-[30px] md:text-[52px] lg:text-[72px] font-black tracking-[-2.88px] text-white text-center'>
+						<div className='mt-[120px] mx-[20px] lg:mx-0'>
+							<h2 className='text-[30px] md:text-[52px] xl:text-[72px] font-black tracking-[-2.88px] text-white text-center'>
 								Волонтерство
 							</h2>
-							<p className='text-[17px] md:text-[24px] leading-[28px] lg:leading-[32px] text-white text-center lg:w-[628px] mx-auto mt-[45px] w-[80%]'>
+							<p className='text-[17px] md:text-[24px] leading-[28px] lg:leading-[32px] text-white text-center lg:w-[628px] mx-auto mt-[30px] xl:mt-[45px] w-[90%]'>
 								Присоединяйтесь к нашей дружной команде волонтеров и вместе мы
 								сможем сделать больше для животных в нужде.
 							</p>
 
-							<div className='flex flex-col md:flex-row items-center gap-[13px] mt-[45px] mx-[20px] xl:mx-0'>
+							<div className='flex flex-col md:flex-row items-center gap-[13px] mt-[45px]'>
 								{volunteerRoles.map((role, index) => (
 									<div
 										key={index}
 										className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'
 									>
-										<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
+										<h3 className='text-[#56423D] text-[24px] sm:text-[30px] md:text-[30px] xl:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] lg:leading-[45px] z-[2] relative lg:w-[330px] leading-[30px]'>
 											{role.title}
 										</h3>
-										<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
+										<p className='text-[#56423D] relative text-[19px] md:text-[20px] xl:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
 											{role.description}
 										</p>
 										<img

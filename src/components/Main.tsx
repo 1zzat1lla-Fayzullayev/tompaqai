@@ -9,13 +9,13 @@ function Main() {
 					<div className='pt-[200px] md:pb-[100px] lg:pb-0 lg:pt-[150px] font-Inter flex flex-col lg:flex-row items-center relative mx-[20px] xl:mx-0'>
 						<div className='flex flex-col z-10 items-center lg:items-start text-center lg:text-left pb-[200px]'>
 							<h2
-								className='text-3xl lg:text-[80px] leading-tight lg:leading-[77px] font-bold w-full lg:w-[600px] text-white'
+								className='text-3xl md:text-[60px] xl:text-[80px] leading-tight lg:leading-[77px] font-bold w-full lg:w-[600px] text-white'
 								data-aos='fade-up'
 							>
 								Добро пожаловать в tompaqai!
 							</h2>
 							<p
-								className='text-[16px] lg:text-[24px] text-white leading-snug lg:leading-[32px] w-full lg:w-[520px] mt-4 lg:mt-[40px]'
+								className='text-[16px] md:text-[20px] xl:text-[24px] text-white leading-snug lg:leading-[32px] w-full lg:w-[520px] mt-4 lg:mt-[40px]'
 								data-aos='fade-up'
 								data-aos-delay='300'
 							>
@@ -24,7 +24,7 @@ function Main() {
 								животного в Астане.
 							</p>
 							<button
-								className='bg-[#774C49] w-full lg:w-[360px] flex items-center justify-center lg:justify-start rounded-[40px] gap-4 lg:gap-[59px] py-3 lg:py-[20px] px-6 lg:px-[38px] mt-6 lg:mt-[70px]'
+								className='bg-[#774C49] w-[300px] lg:w-[360px] flex items-center justify-between rounded-[40px] gap-4 lg:gap-[59px] py-3 lg:py-[20px] px-[20px] xl:px-[38px] mt-6 lg:mt-[70px]'
 								data-aos='fade-up'
 								data-aos-delay='600'
 							>
@@ -34,7 +34,7 @@ function Main() {
 								<img
 									src={Images.main_arrow}
 									alt='main arrow'
-									className='w-6 lg:w-[40px]'
+									className='w-[30px] md:w-[40px]'
 								/>
 							</button>
 						</div>
@@ -56,7 +56,7 @@ function Main() {
 							<img
 								src={Images.main_cat}
 								alt='cat'
-								className='absolute bottom-[-92px] right-[200px] md:right-[430px] md:bottom-[-140px] lg:bottom-[-400px] z-[20] lg:right-[-60px] lg:w-[600px] md:max-w-[500px] hidden md:flex'
+								className='absolute bottom-[-92px] right-[200px] md:right-[430px] md:bottom-[-140px] lg:bottom-[-400px] z-[20] lg:right-[-60px] lg:w-[600px] md:max-w-[500px] hidden lg:flex'
 								data-aos='fade-up'
 							/>
 							<img

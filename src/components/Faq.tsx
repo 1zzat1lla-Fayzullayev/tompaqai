@@ -21,7 +21,7 @@ const Faq: React.FC = () => {
 		<>
 			<Wrapper>
 				<div className='font-Inter mt-[120px] mx-[20px] xl:mx-0'>
-					<h2 className='text-[45px] lg:text-[72px] text-[#191919] font-black'>
+					<h2 className='text-[45px] md:text-[52px] xl:text-[72px] text-[#191919] font-black'>
 						FAQ
 					</h2>
 					<div className='flex flex-col gap-[20px] mt-[48px]'>
@@ -31,7 +31,7 @@ const Faq: React.FC = () => {
 									className='flex items-center justify-between bg-[#F8F8F8] p-[32px] rounded-t-[20px] cursor-pointer'
 									onClick={() => toggleOpen(index)}
 								>
-									<h3 className='text-[18px] md:text-[23px] lg:text-[33px] font-black tracking-[-1.52px]'>
+									<h3 className='text-[18px] md:text-[30px] xl:text-[33px] font-black tracking-[-1.52px]'>
 										{`${item.question}`}
 									</h3>
 									<img
@@ -54,7 +54,7 @@ const Faq: React.FC = () => {
 											transition={{ duration: 0.5 }}
 											className='border-[2px] border-[#F8F8F8] p-[32px] rounded-b-[20px]'
 										>
-											<p className='text-[16px] md:text-[17px] lg:text-[18px]'>
+											<p className='text-[16px] md:text-[18px]'>
 												{item.answer}
 											</p>
 										</motion.div>
