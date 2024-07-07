@@ -3,11 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
 import faqData from '../data/faqData'
-
-interface FaqItem {
-	question: string
-	answer: string
-}
+import FaqItem from '../interfaces/IFaq'
 
 const Faq: React.FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean[]>(
@@ -25,7 +21,9 @@ const Faq: React.FC = () => {
 		<>
 			<Wrapper>
 				<div className='font-Inter mt-[120px] mx-[20px] xl:mx-0'>
-					<h2 className='text-[45px] lg:text-[72px] text-[#191919] font-black'>FAQ</h2>
+					<h2 className='text-[45px] lg:text-[72px] text-[#191919] font-black'>
+						FAQ
+					</h2>
 					<div className='flex flex-col gap-[20px] mt-[48px]'>
 						{faqData.map((item: FaqItem, index: number) => (
 							<div key={index}>
@@ -56,7 +54,9 @@ const Faq: React.FC = () => {
 											transition={{ duration: 0.5 }}
 											className='border-[2px] border-[#F8F8F8] p-[32px] rounded-b-[20px]'
 										>
-											<p className='text-[16px] md:text-[17px] lg:text-[18px]'>{item.answer}</p>
+											<p className='text-[16px] md:text-[17px] lg:text-[18px]'>
+												{item.answer}
+											</p>
 										</motion.div>
 									)}
 								</AnimatePresence>

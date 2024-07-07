@@ -8,6 +8,7 @@ import MainStep from './components/MainStep'
 import Navbar from './components/Navbar'
 import Images from './Images'
 import Faq from './components/Faq'
+import Form from './components/Form'
 
 function App() {
 	const [loading, setLoading] = useState<boolean>(true)
@@ -50,6 +51,7 @@ function App() {
 			<InformationProject />
 			<Charity />
 			<Faq />
+			<Form />
 		</>
 	)
 }
