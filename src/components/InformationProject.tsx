@@ -4,7 +4,7 @@ function InformationProject() {
 	return (
 		<>
 			<Wrapper>
-				<div className='mt-[400px] lg:mt-[150px] font-Inter mx-[20px] xl:mx-0'>
+				<div className='mt-[450px] lg:mt-[150px] font-Inter mx-[20px] xl:mx-0'>
 					<div className='text-center w-full lg:text-start'>
 						<h2 className='text-[24px] sm:text-[40px] lg:text-[72px] text-[#1E1E1E] font-black'>
 							Информация о проекте
