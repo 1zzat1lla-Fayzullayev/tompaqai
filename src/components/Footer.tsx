@@ -16,7 +16,7 @@ function Footer() {
 							<ul className='flex items-center gap-[24px] flex-col sm:flex-row'>
 								<li>
 									<a
-										href='#'
+										href='#home'
 										className='text-white transition-all ease-in-out hover:text-[#FF4F24]'
 									>
 										Главная
@@ -24,7 +24,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										href='#'
+										href='#information'
 										className='text-white transition-all ease-in-out hover:text-[#FF4F24]'
 									>
 										Информация
@@ -32,7 +32,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										href='#'
+										href='#shelters'
 										className='text-white transition-all ease-in-out hover:text-[#FF4F24]'
 									>
 										Приюты
@@ -40,7 +40,7 @@ function Footer() {
 								</li>
 								<li>
 									<a
-										href='#'
+										href='#volunteering'
 										className='text-white transition-all ease-in-out hover:text-[#FF4F24]'
 									>
 										Волонтерство

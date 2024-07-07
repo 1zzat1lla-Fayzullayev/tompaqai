@@ -17,7 +17,7 @@ function Charity() {
 	}, [])
 	return (
 		<>
-			<div className='mt-[104px] bg-[#FF6842] pb-[120px]'>
+			<div className='mt-[104px] bg-[#FF6842] pb-[120px]' id='shelters'>
 				<Wrapper>
 					<div className='font-Inter pt-[134px] mx-[20px] xl:mx-0'>
 						<div>
@@ -81,7 +81,8 @@ function Charity() {
 						<img src={Images.cat2} alt='cat' className='w-[295px]' />
 					</div>
 
-					<div className='mt-[120px]'>
+					<div className='mt-[120px]' id='volunteering'>
+						<br />
 						<div className='mt-[120px] mx-[20px] lg:mx-0'>
 							<h2
 								className='text-[30px] md:text-[52px] xl:text-[72px] font-black tracking-[-2.88px] text-white text-center'

@@ -30,7 +30,8 @@ const Faq: React.FC = () => {
 	}, [])
 
 	return (
-		<>
+		<div id='faq'>
+			<br />
 			<Wrapper>
 				<div
 					className='font-Inter mt-[120px] mx-[20px] xl:mx-0'
@@ -77,7 +78,7 @@ const Faq: React.FC = () => {
 					</div>
 				</div>
 			</Wrapper>
-		</>
+		</div>
 	)
 }
 

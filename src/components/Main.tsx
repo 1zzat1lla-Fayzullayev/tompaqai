@@ -15,7 +15,7 @@ function Main() {
 
 	return (
 		<>
-			<div className='bg-[#FF6842] w-full relative overflow-hidden'>
+			<div className='bg-[#FF6842] w-full relative overflow-hidden' id='home'>
 				<Wrapper>
 					<div className='pt-[200px] md:pb-[100px] lg:pb-0 lg:pt-[150px] font-Inter flex flex-col lg:flex-row items-center relative mx-[20px] xl:mx-0'>
 						<div className='flex flex-col z-10 items-center lg:items-start text-center lg:text-left pb-[200px]'>

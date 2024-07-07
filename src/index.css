@@ -8,18 +8,23 @@ body {
 	overflow-x: hidden;
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	background: white;
 	width: 5px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	background-color: #f3471d;
 	border-radius: 20px;
 }

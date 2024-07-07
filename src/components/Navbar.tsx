@@ -25,11 +25,16 @@ function Navbar() {
 				<Wrapper>
 					<div className='flex justify-between items-center font-Inter'>
 						<div className='flex gap-[32px]'>
-							<h2 className='text-[32px] font-bold text-[#fff]'>tompaqai.</h2>
+							<a
+								href='#'
+								className='text-[32px] font-bold text-[#fff] cursor-pointer'
+							>
+								tompaqai.
+							</a>
 							<ul className='lg:flex items-center gap-[24px] hidden'>
 								<li>
 									<a
-										href='#'
+										href='#home'
 										className='text-black transition-all ease-in-out hover:text-white'
 									>
 										Главная
@@ -37,7 +42,7 @@ function Navbar() {
 								</li>
 								<li>
 									<a
-										href='#'
+										href='#information'
 										className='text-black transition-all ease-in-out hover:text-white'
 									>
 										Информация
@@ -45,7 +50,7 @@ function Navbar() {
 								</li>
 								<li>
 									<a
-										href='#'
+										href='#shelters'
 										className='text-black transition-all ease-in-out hover:text-white'
 									>
 										Приюты
@@ -53,7 +58,7 @@ function Navbar() {
 								</li>
 								<li>
 									<a
-										href='#'
+										href='#volunteering'
 										className='text-black transition-all ease-in-out hover:text-white'
 									>
 										Волонтерство
@@ -77,7 +82,7 @@ function Navbar() {
 								</div>
 							</div>
 							<button className='border text-white rounded-[100px] items-center justify-center py-[10px] px-[32px] transition-all ease-in-out hover:text-[#FF4F24] hover:bg-white hidden lg:flex'>
-								FAQ
+								<a href='#faq'>FAQ</a>
 							</button>
 							<button className='bg-white border rounded-[100px] py-[10px] px-[20px] xl:px-[32px] text-[#FF4F24] transition-all ease-in-out hover:border hover:bg-inherit hover:text-white hidden lg:flex'>
 								Поиск животных
