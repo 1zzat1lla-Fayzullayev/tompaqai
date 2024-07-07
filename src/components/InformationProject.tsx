@@ -1,7 +1,19 @@
+import { useEffect } from 'react'
 import 'aos/dist/aos.css'
+import AOS from 'aos'
 import Wrapper from '../layout/Wrapper'
 
 function InformationProject() {
+	useEffect(() => {
+		AOS.init({
+			duration: 1200,
+			disable: function () {
+				return window.innerWidth < 1024
+			},
+			once: true,
+		})
+	}, [])
+
 	return (
 		<Wrapper>
 			<div className='mt-[450px] md:mt-[200px] xl:mt-[150px] font-Inter mx-[20px] xl:mx-0'>
@@ -21,7 +33,10 @@ function InformationProject() {
 					</p>
 				</div>
 				<div className='flex flex-col lg:flex-row mt-[70px] lg:mt-[105px] gap-[52px] items-start justify-center mx-auto'>
-					<div className='w-full flex justify-center lg:justify-start'>
+					<div
+						className='w-full flex justify-center lg:justify-start'
+						data-aos='fade-right'
+					>
 						<div className='bg-[#EEE] rounded-[10px] w-full max-w-[610px]'>
 							<h3 className='text-[24px] md:text-[30px] xl:text-[40px] font-black px-[24px] pt-[24px]'>
 								Нынешняя проблема
@@ -32,7 +47,10 @@ function InformationProject() {
 							</p>
 						</div>
 					</div>
-					<div className='w-full flex justify-center lg:justify-start'>
+					<div
+						className='w-full flex justify-center lg:justify-start'
+						data-aos='fade-left'
+					>
 						<div className='bg-[#EEE] rounded-[10px] w-full max-w-[610px]'>
 							<h3 className='text-[24px] md:text-[30px] xl:text-[40px] font-black px-[24px] pt-[24px] tracking-[-1.6px] leading-[45px]'>
 								Как мы решаем эту проблему?

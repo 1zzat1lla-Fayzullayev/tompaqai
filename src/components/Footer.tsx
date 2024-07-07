@@ -50,9 +50,21 @@ function Footer() {
 						</div>
 					</div>
 					<div className='flex items-center justify-center gap-[16px] mt-[77px] pb-[10px]'>
-						<img src={Images.telegram} alt='telegram' />
-						<img src={Images.instagram} alt='instagram' />
-						<img src={Images.linkedin} alt='linkedin' />
+						<img
+							src={Images.telegram}
+							alt='telegram'
+							className='cursor-pointer'
+						/>
+						<img
+							src={Images.instagram}
+							alt='instagram'
+							className='cursor-pointer'
+						/>
+						<img
+							src={Images.linkedin}
+							alt='linkedin'
+							className='cursor-pointer'
+						/>
 					</div>
 				</Wrapper>
 			</div>

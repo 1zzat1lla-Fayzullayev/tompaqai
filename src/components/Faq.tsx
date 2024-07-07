@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import 'aos/dist/aos.css'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
 import faqData from '../data/faqData'
 import FaqItem from '../interfaces/IFaq'
+import Aos from 'aos'
 
 const Faq: React.FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean[]>(
@@ -17,10 +19,23 @@ const Faq: React.FC = () => {
 		setIsOpen(updatedOpenState)
 	}
 
+	useEffect(() => {
+		Aos.init({
+			duration: 1200,
+			disable: function () {
+				return window.innerWidth < 1024
+			},
+			once: true,
+		})
+	}, [])
+
 	return (
 		<>
 			<Wrapper>
-				<div className='font-Inter mt-[120px] mx-[20px] xl:mx-0'>
+				<div
+					className='font-Inter mt-[120px] mx-[20px] xl:mx-0'
+					data-aos='fade-up'
+				>
 					<h2 className='text-[45px] md:text-[52px] xl:text-[72px] text-[#191919] font-black'>
 						FAQ
 					</h2>
@@ -34,16 +49,13 @@ const Faq: React.FC = () => {
 									<h3 className='text-[18px] md:text-[30px] xl:text-[33px] font-black tracking-[-1.52px]'>
 										{`${item.question}`}
 									</h3>
-									<img
+									<motion.img
 										src={Images.icon_faqplus}
 										alt='plus icon'
 										className='cursor-pointer w-[48px] lg:w-[64px]'
-										style={{
-											transform: isOpen[index]
-												? 'rotate(45deg)'
-												: 'rotate(0deg)',
-											transition: 'transform 0.2s',
-										}}
+										initial={{ rotate: 0 }}
+										animate={{ rotate: isOpen[index] ? 45 : 0 }}
+										transition={{ duration: 0.2 }}
 									/>
 								</div>
 								<AnimatePresence>

@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
 import MobileNavbar from '../shared/header/MobileNavbar'
+import Aos from 'aos'
 
 function Navbar() {
 	const [showMobileNav, setShowMobileNav] = useState<boolean>(false)
@@ -9,6 +10,13 @@ function Navbar() {
 	const handleShowMobileNav = () => {
 		setShowMobileNav(!showMobileNav)
 	}
+
+	useEffect(() => {
+		Aos.init({
+			duration: 1200,
+			once: true,
+		})
+	}, [])
 
 	return (
 		<>

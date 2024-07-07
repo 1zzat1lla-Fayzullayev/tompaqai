@@ -1,7 +1,18 @@
+import { useEffect } from 'react'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
+import Aos from 'aos'
 
 function Main() {
+	useEffect(() => {
+		Aos.init({
+			duration: 1200,
+			disable: function () {
+				return window.innerWidth < 1024
+			},
+			once: true,
+		})
+	}, [])
 	return (
 		<>
 			<div className='bg-[#FF6842] w-full relative overflow-hidden'>

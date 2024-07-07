@@ -1,74 +1,64 @@
+import 'aos/dist/aos.css'
 import volunteerRoles from '../data/volunteerRoles'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
+import { useEffect } from 'react'
+import Aos from 'aos'
 
 function Charity() {
+	useEffect(() => {
+		Aos.init({
+			duration: 1200,
+			disable: function () {
+				return window.innerWidth < 1024
+			},
+			once: true,
+		})
+	}, [])
 	return (
 		<>
 			<div className='mt-[104px] bg-[#FF6842] pb-[120px]'>
 				<Wrapper>
 					<div className='font-Inter pt-[134px] mx-[20px] xl:mx-0'>
 						<div>
-							<h2 className='text-[22px] md:text-[52px] xl:text-[72px] font-black text-white text-center md:text-start md:leading-[60px] lg:w-[697px] lg:leading-[65px]'>
+							<h2
+								className='text-[22px] md:text-[52px] xl:text-[72px] font-black text-white text-center md:text-start md:leading-[60px] lg:w-[697px] lg:leading-[65px]'
+								data-aos='fade-up'
+							>
 								Мы сотрудничаем с несколькими приютами
 							</h2>
-							<p className='text-white text-[16px] md:text-[24px] leading-[23px] md:leading-[32px] mt-[20px] lg:mt-[40px] lg:w-[628px] text-center md:text-start'>
+							<p
+								className='text-white text-[16px] md:text-[24px] leading-[23px] md:leading-[32px] mt-[20px] lg:mt-[40px] lg:w-[628px] text-center md:text-start'
+								data-aos='fade-up'
+								data-aos-delay='200'
+							>
 								Узнайте больше о наших партнерах и их работе, и выберите своего
 								будущего друга.
 							</p>
 						</div>
-						<div className='grid grid-cols-1 lg:grid-cols-3 gap-[24px] lg:mt-[40px] '>
-							<div className='flex items-center justify-between bg-inherit py-[28px] px-[40px] rounded-[16px]'>
-								<h4 className='text-[#56423D] text-[18px] leading-[24px] font-bold hidden'>
-									Happy Smile Foundation
-								</h4>
-								<img
-									src={Images.majesticons}
-									alt='majesticons'
-									className='w-[40px] md:w-[50px] lg:w-[60px] hidden'
-								/>
-							</div>
-							<div className='flex items-center justify-between bg-[#FFA68E] py-[28px] px-[40px] rounded-[16px]'>
-								<h4 className='text-[#56423D] text-[18px] leading-[24px] font-bold'>
-									Happy Smile Foundation
-								</h4>
-								<img
-									src={Images.majesticons}
-									alt='majesticons'
-									className='w-[40px] md:w-[50px] lg:w-[60px]'
-								/>
-							</div>
-							<div className='flex items-center justify-between bg-[#FFA68E] py-[28px] px-[40px] rounded-[16px]'>
-								<h4 className='text-[#56423D] text-[18px] leading-[24px] font-bold'>
-									Happy Smile Foundation
-								</h4>
-								<img
-									src={Images.majesticons}
-									alt='majesticons'
-									className='w-[40px] md:w-[50px] lg:w-[60px]'
-								/>
-							</div>
-							<div className='flex items-center justify-between bg-[#FFA68E] py-[28px] px-[40px] rounded-[16px]'>
-								<h4 className='text-[leading-[24px] font-bold text-[#56423D] text-[18px]'>
-									Happy Smile Foundation
-								</h4>
-								<img
-									src={Images.majesticons}
-									alt='majesticons'
-									className='w-[40px] md:w-[50px] lg:w-[60px]'
-								/>
-							</div>
-							<div className='flex items-center justify-between bg-[#FFA68E] py-[28px] px-[40px] rounded-[16px]'>
-								<h4 className='text-[leading-[24px] font-bold text-[#56423D] text-[18px]'>
-									Happy Smile Foundation
-								</h4>
-								<img
-									src={Images.majesticons}
-									alt='majesticons'
-									className='w-[40px] md:w-[50px] lg:w-[60px]'
-								/>
-							</div>
-							<div className='flex items-center justify-between bg-transparent border border-white py-[24px] px-[24px] rounded-[16px]'>
+						<div className='grid grid-cols-1 lg:grid-cols-3 gap-[24px] lg:mt-[40px]'>
+							{Array.from({ length: 5 }).map((_, index) => (
+								<div
+									key={index}
+									className='flex items-center justify-between bg-[#FFA68E] py-[28px] px-[40px] rounded-[16px]'
+									data-aos='zoom-in'
+									data-aos-delay={`${100 * index}`}
+								>
+									<h4 className='text-[#56423D] text-[18px] leading-[24px] font-bold'>
+										Happy Smile Foundation
+									</h4>
+									<img
+										src={Images.majesticons}
+										alt='majesticons'
+										className='w-[40px] md:w-[50px] lg:w-[60px]'
+									/>
+								</div>
+							))}
+							<div
+								className='flex items-center justify-between bg-transparent border border-white py-[24px] px-[24px] rounded-[16px]'
+								data-aos='zoom-in'
+								data-aos-delay='500'
+							>
 								<h4 className='text-[#fff] text-[17px] lg:text-[23px] leading-[32px]'>
 									Свяжитесь с нами для сотрудничества
 								</h4>
@@ -81,7 +71,11 @@ function Charity() {
 						</div>
 					</div>
 
-					<div className='flex items-center justify-center lg:gap-[70px] xl:gap-[150px] w-full mt-[50px] flex-col lg:flex-row'>
+					<div
+						className='flex items-center justify-center lg:gap-[70px] xl:gap-[150px] w-full mt-[50px] flex-col lg:flex-row'
+						data-aos='fade-up'
+						data-aos-delay='300'
+					>
 						<img src={Images.cat1} alt='cat' className='w-[295px]' />
 						<img src={Images.dog} alt='dog' className='w-[295px]' />
 						<img src={Images.cat2} alt='cat' className='w-[295px]' />
@@ -89,10 +83,17 @@ function Charity() {
 
 					<div className='mt-[120px]'>
 						<div className='mt-[120px] mx-[20px] lg:mx-0'>
-							<h2 className='text-[30px] md:text-[52px] xl:text-[72px] font-black tracking-[-2.88px] text-white text-center'>
+							<h2
+								className='text-[30px] md:text-[52px] xl:text-[72px] font-black tracking-[-2.88px] text-white text-center'
+								data-aos='fade-up'
+							>
 								Волонтерство
 							</h2>
-							<p className='text-[17px] md:text-[24px] leading-[28px] lg:leading-[32px] text-white text-center lg:w-[628px] mx-auto mt-[30px] xl:mt-[45px] w-[90%]'>
+							<p
+								className='text-[17px] md:text-[24px] leading-[28px] lg:leading-[32px] text-white text-center lg:w-[628px] mx-auto mt-[30px] xl:mt-[45px] w-[90%]'
+								data-aos='fade-up'
+								data-aos-delay='200'
+							>
 								Присоединяйтесь к нашей дружной команде волонтеров и вместе мы
 								сможем сделать больше для животных в нужде.
 							</p>
@@ -102,6 +103,8 @@ function Charity() {
 									<div
 										key={index}
 										className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'
+										data-aos='fade-up'
+										data-aos-delay={`${100 * index}`}
 									>
 										<h3 className='text-[#56423D] text-[24px] sm:text-[30px] md:text-[30px] xl:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] lg:leading-[45px] z-[2] relative lg:w-[330px] leading-[30px]'>
 											{role.title}
@@ -119,8 +122,12 @@ function Charity() {
 							</div>
 
 							<div className='mx-[20px] xl:mx-0'>
-								<button className='flex items-center justify-center bg-[#774C49] gap-[13px] rounded-[40px] py-[10px] md:py-[20px] px-[20px] md:px-[38px] mx-auto mt-[76px] w-full md:w-[344px] h-[80px]'>
-									<p className='text-white text-[17px] md:text-[24px] font-medium '>
+								<button
+									className='flex items-center justify-center bg-[#774C49] gap-[13px] rounded-[40px] py-[10px] md:py-[20px] px-[20px] md:px-[38px] mx-auto mt-[76px] w-full md:w-[344px] h-[80px]'
+									data-aos='fade-up'
+									data-aos-delay='300'
+								>
+									<p className='text-white text-[17px] md:text-[24px] font-medium'>
 										Свяжитесь с нами
 									</p>
 									<img src={Images.main_arrow} alt='arrow' />
