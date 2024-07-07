@@ -13,3 +13,13 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+
+::-webkit-scrollbar{
+	background: white;
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #f3471d;
+	border-radius: 20px;
+}

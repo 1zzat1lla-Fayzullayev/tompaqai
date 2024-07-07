@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
 import MobileNavbar from '../shared/header/MobileNavbar'
@@ -81,17 +82,35 @@ function Navbar() {
 							<button className='bg-white border rounded-[100px] py-[10px] px-[20px] xl:px-[32px] text-[#FF4F24] transition-all ease-in-out hover:border hover:bg-inherit hover:text-white hidden lg:flex'>
 								Поиск животных
 							</button>
-							<img
+							<motion.img
 								src={Images.hamburger}
 								alt='hamburger'
 								className='w-[50px] lg:hidden flex'
 								onClick={handleShowMobileNav}
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}
+								initial={{ x: -100 }}
+								animate={{ x: 0 }}
+								transition={{ duration: 0.5 }}
 							/>
 						</div>
 					</div>
 				</Wrapper>
 			</div>
-			{showMobileNav && <MobileNavbar closeNav={handleShowMobileNav} />}
+			<AnimatePresence>
+				{showMobileNav && (
+					<motion.div
+						key='mobileNav'
+						initial={{ x: '100%' }}
+						animate={{ x: 0 }}
+						exit={{ x: '100%' }}
+						transition={{ duration: 0.5 }}
+						className='fixed inset-0 bg-[#FF8263] z-[998]'
+					>
+						<MobileNavbar closeNav={handleShowMobileNav} />
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</>
 	)
 }
