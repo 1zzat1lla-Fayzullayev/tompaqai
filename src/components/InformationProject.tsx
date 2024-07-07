@@ -1,41 +1,25 @@
-import { useEffect } from 'react'
-import 'aos/dist/aos.css'
-import AOS from 'aos'
+import { motion } from 'framer-motion'
 import Wrapper from '../layout/Wrapper'
 
 function InformationProject() {
-	useEffect(() => {
-		AOS.init({
-			duration: 1200,
-			disable: function () {
-				return window.innerWidth < 1024
-			},
-			once: true,
-		})
-	}, [])
-
 	return (
 		<Wrapper>
 			<div className='mt-[450px] md:mt-[200px] xl:mt-[150px] font-Inter mx-[20px] xl:mx-0'>
 				<div className='text-center w-full lg:text-start'>
-					<h2
-						className='text-[24px] sm:text-[40px] md:text-[52px] xl:text-[72px] text-[#1E1E1E] font-black'
-						data-aos='zoom-in'
-					>
+					<h2 className='text-[24px] sm:text-[40px] md:text-[52px] xl:text-[72px] text-[#1E1E1E] font-black'>
 						Информация о проекте
 					</h2>
-					<p
-						className='text-[#1E1E1E] opacity-[0.5] text-[16px] lg:text-[24px] leading-[150%] mx-auto lg:mx-0 w-full sm:w-[50%] lg:w-[755px]'
-						data-aos='fade-up'
-					>
+					<p className='text-[#1E1E1E] opacity-[0.5] text-[16px] lg:text-[24px] leading-[150%] mx-auto lg:mx-0 w-full sm:w-[50%] lg:w-[755px]'>
 						tompaqai – это инициатива, основанная на вере в благородную миссию
 						помощи животным.
 					</p>
 				</div>
 				<div className='flex flex-col lg:flex-row mt-[70px] lg:mt-[105px] gap-[52px] items-start justify-center mx-auto'>
-					<div
+					<motion.div
 						className='w-full flex justify-center lg:justify-start'
-						data-aos='fade-right'
+						initial={{ opacity: 0, x: -50 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1 }}
 					>
 						<div className='bg-[#EEE] rounded-[10px] w-full max-w-[610px]'>
 							<h3 className='text-[24px] md:text-[30px] xl:text-[40px] font-black px-[24px] pt-[24px]'>
@@ -46,10 +30,12 @@ function InformationProject() {
 								Многие животные нуждаются в новых домах и заботе.
 							</p>
 						</div>
-					</div>
-					<div
+					</motion.div>
+					<motion.div
 						className='w-full flex justify-center lg:justify-start'
-						data-aos='fade-left'
+						initial={{ opacity: 0, x: 50 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1 }}
 					>
 						<div className='bg-[#EEE] rounded-[10px] w-full max-w-[610px]'>
 							<h3 className='text-[24px] md:text-[30px] xl:text-[40px] font-black px-[24px] pt-[24px] tracking-[-1.6px] leading-[45px]'>
@@ -62,7 +48,7 @@ function InformationProject() {
 								брать питомцев из приютов.
 							</p>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</Wrapper>
