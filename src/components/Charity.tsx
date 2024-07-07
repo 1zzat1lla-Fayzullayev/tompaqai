@@ -1,3 +1,4 @@
+import volunteerRoles from '../data/volunteerRoles'
 import Images from '../Images'
 import Wrapper from '../layout/Wrapper'
 
@@ -87,65 +88,44 @@ function Charity() {
 					</div>
 
 					<div className='mt-[120px]'>
-						<h2 className='text-[30px] md:text-[52px] lg:text-[72px] font-black tracking-[-2.88px] text-white text-center'>
-							Волонтерство
-						</h2>
-						<p className='text-[17px] md:text-[24px] leading-[28px] lg:leading-[32px] text-white text-center lg:w-[628px] mx-auto mt-[45px] w-[80%]'>
-							Присоединяйтесь к нашей дружной команде волонтеров и вместе мы
-							сможем сделать больше для животных в нужде.
-						</p>
+						<div className='mt-[120px]'>
+							<h2 className='text-[30px] md:text-[52px] lg:text-[72px] font-black tracking-[-2.88px] text-white text-center'>
+								Волонтерство
+							</h2>
+							<p className='text-[17px] md:text-[24px] leading-[28px] lg:leading-[32px] text-white text-center lg:w-[628px] mx-auto mt-[45px] w-[80%]'>
+								Присоединяйтесь к нашей дружной команде волонтеров и вместе мы
+								сможем сделать больше для животных в нужде.
+							</p>
 
-						<div className='flex flex-col md:flex-row items-center gap-[13px] mt-[45px] mx-[20px] xl:mx-0'>
-							<div className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'>
-								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
-									Обновлять базу данных
-								</h3>
-								<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
-									Помогайте с записью информации о питомцах в приютах, чтобы
-									каждый из них мог быть найден и получил заслуженный дом.
-								</p>
-								<img
-									src={Images.features_paw}
-									alt='paw'
-									className='absolute right-0 bottom-2 z-[1]'
-								/>
+							<div className='flex flex-col md:flex-row items-center gap-[13px] mt-[45px] mx-[20px] xl:mx-0'>
+								{volunteerRoles.map((role, index) => (
+									<div
+										key={index}
+										className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'
+									>
+										<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
+											{role.title}
+										</h3>
+										<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
+											{role.description}
+										</p>
+										<img
+											src={role.imageUrl}
+											alt='paw'
+											className='absolute right-0 bottom-2 z-[1]'
+										/>
+									</div>
+								))}
 							</div>
-							<div className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'>
-								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
-									Социальные сети
-								</h3>
-								<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
-									Поддерживайте наши социальные сети, чтобы больше людей узнали
-									о нашей миссии и стали частью изменений в жизни животных.
-								</p>
-								<img
-									src={Images.features_paw}
-									alt='paw'
-									className='absolute right-0 bottom-2 z-[1]'
-								/>
+
+							<div className='mx-[20px] xl:mx-0'>
+								<button className='flex items-center justify-center bg-[#774C49] gap-[13px] rounded-[40px] py-[10px] md:py-[20px] px-[20px] md:px-[38px] mx-auto mt-[76px] w-full md:w-[344px] h-[80px]'>
+									<p className='text-white text-[17px] md:text-[24px] font-medium '>
+										Свяжитесь с нами
+									</p>
+									<img src={Images.main_arrow} alt='arrow' />
+								</button>
 							</div>
-							<div className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'>
-								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
-									Финансовая помощь
-								</h3>
-								<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
-									Пожертвуйте финансовую помощь. Все средства пойдут
-									непосредственно в приюты, обеспечивая заботу о животных.
-								</p>
-								<img
-									src={Images.features_paw}
-									alt='paw'
-									className='absolute right-0 bottom-2 z-[1]'
-								/>
-							</div>
-						</div>
-						<div className='mx-[20px] xl:mx-0'>
-							<button className='flex items-center justify-center bg-[#774C49] gap-[13px] rounded-[40px] py-[10px] md:py-[20px] px-[20px] md:px-[38px] mx-auto mt-[76px] w-full md:w-[344px] h-[80px]'>
-								<p className='text-white text-[17px] md:text-[24px] font-medium '>
-									Свяжитесь с нами
-								</p>
-								<img src={Images.main_arrow} alt='arrow' />
-							</button>
 						</div>
 					</div>
 				</Wrapper>

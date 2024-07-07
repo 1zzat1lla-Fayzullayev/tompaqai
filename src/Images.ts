@@ -17,6 +17,7 @@ import cat2 from './assets/cat2.png'
 import dog from './assets/dog1.png'
 import features_paw from './assets/features_paw.png'
 import loading from './assets/loading.gif'
+import icon_faqplus from './assets/icon_faqplus.png'
 
 export default {
 	bottom_arrow,
@@ -38,4 +39,5 @@ export default {
 	dog,
 	features_paw,
 	loading,
+	icon_faqplus,
 }
