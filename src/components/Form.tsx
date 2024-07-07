@@ -7,7 +7,7 @@ function Form() {
 			<Wrapper>
 				<div className='flex flex-col xl:flex-row items-center pt-[93px] pb-[94px] mx-[20px] xl:mx-0'>
 					<div className='bg-[#FFA68E] xl:rounded-tl-[24px] xl:rounded-bl-[24px] xl:rounded-none rounded-[24px] xl:w-[572px] flex flex-col gap-[47px] p-[20px] lg:p-[40px] w-full '>
-						<h1 className='text-[#56423D] text-[24px] md:text-[40px] xl:text-[48px] tracking-[-0.96px] leading-[32px] lg:leading-[64px] font-semibold'>
+						<h1 className='text-[#56423D] text-[24px] md:text-[40px] xl:text-[48px] tracking-[-0.96px] leading-[32px] md:leading-[50px] lg:leading-[64px] font-semibold'>
 							Нужна помощь или дополнительная информация? Свяжитесь с нами по
 							адресу ниже.
 						</h1>
