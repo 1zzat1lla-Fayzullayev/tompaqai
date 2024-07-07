@@ -97,7 +97,7 @@ function Charity() {
 
 						<div className='flex flex-col md:flex-row items-center gap-[13px] mt-[45px] mx-[20px] xl:mx-0'>
 							<div className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'>
-								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative'>
+								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
 									Обновлять базу данных
 								</h3>
 								<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
@@ -111,7 +111,7 @@ function Charity() {
 								/>
 							</div>
 							<div className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'>
-								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative'>
+								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
 									Социальные сети
 								</h3>
 								<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>
@@ -125,7 +125,7 @@ function Charity() {
 								/>
 							</div>
 							<div className='relative w-full md:w-[416px] h-[435px] bg-[#FFA68E] rounded-[10px]'>
-								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative'>
+								<h3 className='text-[#56423D] text-[25px] md:text-[30px] lg:text-[40px] font-black tracking-[-1.6px] pl-[24px] pt-[71px] leading-[45px] z-[2] relative lg:w-[330px]'>
 									Финансовая помощь
 								</h3>
 								<p className='text-[#56423D] relative text-[17px] lg:text-[24px] tracking-[-0.96px] pl-[24px] mt-[32px] z-[2]'>

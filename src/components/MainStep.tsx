@@ -5,7 +5,7 @@ function MainStep() {
 	return (
 		<>
 			<Wrapper>
-				<div className='absolute flex flex-col lg:flex-row justify-between items-center lg:text-left bg-[#EFEEEE] border border-white p-[40px] md:top-[510px] rounded-[24px] lg:top-[795px] z-[1] lg:max-w-[1120px] xl:max-w-[1100px] 2xl:max-w-[1264px] w-full mx-auto font-Inter'>
+				<div className='absolute flex flex-col lg:flex-row justify-between items-center lg:text-left bg-[#EFEEEE] border border-white p-[40px] md:top-[610px] rounded-[24px] lg:top-[795px] z-[1] lg:max-w-[1120px] xl:max-w-[1100px] 2xl:max-w-[1264px] w-full mx-auto font-Inter'>
 					<div className='flex items-start gap-[30px] mb-6 lg:mb-0'>
 						<img
 							src={Images.step1_icon}
