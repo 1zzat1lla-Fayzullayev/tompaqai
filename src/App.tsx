@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Images from './Images'
 import Faq from './components/Faq'
 import Form from './components/Form'
+import Footer from './components/Footer'
 
 function App() {
 	const [loading, setLoading] = useState<boolean>(true)
@@ -52,6 +53,7 @@ function App() {
 			<Charity />
 			<Faq />
 			<Form />
+			<Footer />
 		</>
 	)
 }

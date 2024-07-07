@@ -20,6 +20,9 @@ import loading from './assets/loading.gif'
 import icon_faqplus from './assets/icon_faqplus.png'
 import form_arrow from './assets/form_arrow.png'
 import form_arrow2 from './assets/form_arrow2.png'
+import telegram from './assets/telegram.png'
+import instagram from './assets/instagram.png'
+import linkedin from './assets/linkedin.png'
 
 export default {
 	bottom_arrow,
@@ -44,4 +47,7 @@ export default {
 	icon_faqplus,
 	form_arrow,
 	form_arrow2,
+	telegram,
+	instagram,
+	linkedin,
 }
